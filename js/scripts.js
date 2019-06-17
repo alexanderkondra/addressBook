@@ -1,3 +1,14 @@
+$(function(){
+  var addressBook = new AddressBook();
+  var contact = new Contact("Ada", "Lovelace", "503-555-0100");
+  var contact2 = new Contact("Grace", "Hopper", "503-555-0199");
+  addressBook.addContact(contact);
+  addressBook.addContact(contact2);
+
+  console.log("Address Book Created");
+  debugger;
+});
+
 //Business Logic for AddressBook
 function AddressBook() {
   this.contacts = []
@@ -55,3 +66,38 @@ Contact.prototype.fullName = function() {
 // var contact2 = new Contact("Grace", "Hopper", "503-555-0199");
 // addressBook.addContact(contact);
 // addressBook.addContact(contact2);
+
+//
+//
+
+// // contact4.phoneNumber = "523-555-0200"
+// addressBook
+// AddressBook {contacts: Array(5), currentId: 5}
+// contacts: Array(5)
+// 0: Contact {firstName: "Ada", lastName: "Lovelace", phoneNumber: "503-555-0100", id: 1}
+// 1: Contact {firstName: "Grace", lastName: "Hopper", phoneNumber: "503-555-0199", id: 2}
+// 2: Contact {firstName: "Adam", lastName: "Mill", phoneNumber: "999-99-999", id: 4}
+// 3: Contact {firstName: "Adam", lastName: "Mill", phoneNumber: "999-99-999", id: 4}
+// // this one needs to be changed
+// // 4: Contact {firstName: "mama", lastName: "aaaopper", phoneNumber: "523-555-0199", id: 5} <========== from this
+// length: 5
+// __proto__: Array(0)
+// currentId: 5
+// __proto__: Object
+
+// contact4.phoneNumber = "523-555-0200" <======== target contact 4
+
+// "523-555-0200"
+// addressBook
+// AddressBook {contacts: Array(5), currentId: 5}
+// contacts: Array(5)
+// 0: Contact {firstName: "Ada", lastName: "Lovelace", phoneNumber: "503-555-0100", id: 1}
+// 1: Contact {firstName: "Grace", lastName: "Hopper", phoneNumber: "503-555-0199", id: 2}
+// 2: Contact {firstName: "Adam", lastName: "Mill", phoneNumber: "999-99-999", id: 4}
+// 3: Contact {firstName: "Adam", lastName: "Mill", phoneNumber: "999-99-999", id: 4}
+// // to this one
+// 4: Contact {firstName: "mama", lastName: "aaaopper", phoneNumber: "523-555-0200", id: 5} <=========== to this
+// length: 5
+// __proto__: Array(0)
+// currentId: 5
+// __proto__: Object
